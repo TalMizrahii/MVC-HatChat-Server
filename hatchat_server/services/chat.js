@@ -17,10 +17,10 @@ const addNewChat = async (username, connectedUsername) => {
         if (username !== connectedUsername) {
             // Find the user by username and select specific fields
             const user = await User.findOne({"username": username}).populate('username displayName profilePic');
-            const saveUser = await User.findOne({"username": username})
-            const connectedUser = await User.findOne({"username": connectedUsername});
+            const receiver = await User.findOne({"username": username})
+            const sender = await User.findOne({"username": connectedUsername});
             // User not found
-            if (!user || !connectedUser) {
+            if (!user || !sender) {
                 return false;
             }
             const maxChatID = await Chat.findOne().sort('-id').limit(1).exec();
@@ -30,7 +30,7 @@ const addNewChat = async (username, connectedUsername) => {
             }
             const newChat = await new Chat({
                 id: chatID,
-                users: [saveUser, connectedUser],
+                users: [receiver, sender],
                 messages: []
             });
 

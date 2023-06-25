@@ -5,6 +5,7 @@ import chatService from "./chat.js"
 import {socketsArray} from "../models/socketsArray.js";
 import {androidTokensArray} from "../models/androidTokens.js";
 import firebaseAdmin from "firebase-admin";
+import {getMessaging} from "firebase-admin/messaging";
 
 const sendMessage = async (username, fullMsg) => {
     try {
@@ -15,24 +16,10 @@ const sendMessage = async (username, fullMsg) => {
     }
 }
 
-const sendMessageAndroid = async (username, fullMsg) => {
+const sendMessageAndroid = async (fullMsg) => {
 
-    const msg = {
-        notification: {
-            title: 'Message from ' + fullMsg.sender.username.toString(),
-            body: fullMsg.content.substring(0, 4096),
-        },
-        data: {
-            senderUsername: fullMsg.sender.username.toString(),
-            senderDisplayName: fullMsg.sender.displayName.toString(),
-            senderProfilePic: fullMsg.sender.profilePic.toString(),
-            created: fullMsg.created.toISOString(),
-            chatID: fullMsg.id.toString(),
-            content: fullMsg.content.toString(),
-        },
-        token: androidTokensArray[username]
-    };
-    await firebaseAdmin.messaging.send(msg)
+
+    await firebaseAdmin.messaging().send(fullMsg)
         .then((response) => {
             console.log('Message sent!');
         }).catch((err) => {
@@ -87,18 +74,38 @@ const addMessage = async (id, content, connectUsername) => {
                 }
             }
 
-            if (androidTokensArray[user1.username]) {
-                if (user0.username === connectUsername) {
-                    await sendMessageAndroid(user1.username, fullMsg);
-                }
-            } else if (androidTokensArray[user0.username]) {
-                await sendMessageAndroid(user0.username, fullMsg);
+
+
+
+
+            let receiver;
+
+            if (user0.username === connectUsername){
+                 receiver = user1.username;
             } else {
-                if (user0.username === connectUsername) {
-                    await sendMessage(user1.username, fullMsg);
-                } else {
-                    await sendMessage(user0.username, fullMsg);
-                }
+                 receiver = user0.username;
+
+            }
+
+            const msg = {
+               "notification": {
+                    "title": 'Message from ' + sender.username,
+                    "body": content.substring(0, 4096),
+                },
+                "data": {
+                    "senderUsername": sender.username,
+                    "created": new Date().toISOString(),
+                    "chatID": id.toString(),
+                    "content": content,
+                },
+                "token": androidTokensArray[receiver]
+            };
+
+            if (androidTokensArray[receiver]){
+
+                await  sendMessageAndroid(msg);
+            } else {
+                await sendMessage(receiver, fullMsg);
             }
 
 
