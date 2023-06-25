@@ -100,6 +100,7 @@ const sendMessageAndroid = async (username, fullMsg) => {
                     }
                 }
 
+
                 await newMessage.save();
                 chat.messages.push(newMessage);
                 await chat.save();
