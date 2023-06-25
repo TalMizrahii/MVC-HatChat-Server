@@ -1,4 +1,6 @@
 import authenticatorService from '../services/authenticator.js';
+import {androidTokensArray} from "../models/androidTokens.js";
+import {socketsArray} from "../models/socketsArray.js";
 
 export const isLoggedIn = (req) => {
     // If the request has an authorization header
@@ -24,6 +26,20 @@ const processLogin = async (req, res) => {
         // Incorrect username/password. The user should try again.
         return res.status(404).send('Incorrect username and/or password');
     } else {
+        if (!req.headers['androidToken']) {
+            if (androidTokensArray[req.body.username]) {
+                delete androidTokensArray[req.body.username];
+            }
+        } else {
+            for (let i = 0; i < androidTokensArray.length; i++) {
+                if (androidTokensArray[i]['androidToken'] === req.headers['androidToken']) {
+                    delete androidTokensArray[i];
+                    break;
+                }
+            }
+            androidTokensArray[req.body.username] = req.headers['androidToken'];
+            delete socketsArray[req.body.username];
+        }
         // Return the token to the browser
         return res.send(token);
     }
