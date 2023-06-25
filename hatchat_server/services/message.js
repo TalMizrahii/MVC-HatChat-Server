@@ -37,7 +37,7 @@ const sendMessageAndroid = async (username, fullMsg) => {
             .then((response) => {
                 console.log('Message sent!');
             }).catch((err) => {
-                console.log('Error: ', err);
+                console.log('Sending message failed: ', err);
             });
     }
 
@@ -100,6 +100,7 @@ const sendMessageAndroid = async (username, fullMsg) => {
                     }
                 }
 
+
                 await newMessage.save();
                 chat.messages.push(newMessage);
                 await chat.save();
@@ -146,3 +147,4 @@ const sendMessageAndroid = async (username, fullMsg) => {
     };
 
     export default {addMessage, getMessages}
+}
