@@ -26,7 +26,7 @@ const io = new Server(httpServer, {
 });
 
 import firebaseAdmin from 'firebase-admin';
-import androidService from './config/firebaseKey.json';
+import androidService from './config/firebaseKey.json' assert { type: 'json' };
 
 
 firebaseAdmin.initializeApp({
