@@ -26,18 +26,18 @@ const processLogin = async (req, res) => {
         // Incorrect username/password. The user should try again.
         return res.status(404).send('Incorrect username and/or password');
     } else {
-        if (!req.headers['androidToken']) {
+        if (!req.headers.authorization) {
             if (androidTokensArray[req.body.username]) {
                 delete androidTokensArray[req.body.username];
             }
         } else {
             for (let i = 0; i < androidTokensArray.length; i++) {
-                if (androidTokensArray[i]['androidToken'] === req.headers['androidToken']) {
+                if (androidTokensArray[i]['androidToken'] === req.headers.authorization) {
                     delete androidTokensArray[i];
                     break;
                 }
             }
-            androidTokensArray[req.body.username] = req.headers['androidToken'];
+            androidTokensArray[req.body.username] = req.headers.authorization;
             delete socketsArray[req.body.username];
         }
         // Return the token to the browser
