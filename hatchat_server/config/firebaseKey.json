@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "hatchatmobile",
+  "private_key_id": "21263987296288cd805b0113f3a6abfca7a0069c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCYZSUB/kU0LoMK\nuOjhJMcAdfMZ7ZYcmyrG2c6VNRSOM63PIV+v3AU07CBKgBCUQwJJy7jDOHbDSWiX\nSNDKNQ42X4qt5rvEteyEch2F++L2VKX1Y8CkzRMW9GM5s8cAqhVmtuVltuiAirhW\nlc8x69yUjg2I8CgENOXBq5x0tzFTBoRKJBbnYmVINnLfr/04QBWNFvk/H8g+In5R\nconB80sngRQE3kPFILX7jH4m5oN8lScolkRzPO+ps0PGX9I1RPBjtop5WgGXQyF3\nrmrAbg0RF9P7VuRtP+aRndH7p070qxKkMN08nU8CT0+ElrTJE9wbIYzKGnFKrvJn\nl0AoUFd7AgMBAAECggEAF8RmgioSxvGeFFUEVOC0fJjoohmQuMNmZ37enhyaKRdc\nOxqcXsP0t+0/l/7jFwxgVfwEw8WRmCFhw35iubaOkeJSsY5zqFkrGvjlK9k962cG\nPwAgslMdcA4LT5t/JNZh4hQSMMvW9P0thKt2lfWQAEcrSzkRNJ6/WnYWP4m2kpkK\n7MGK0S3eOfLd4jpf18WzD62sIaH7Z1TtFeTMSlXZM2bspQaPOx/ie15sspS/vgHW\n41TIweE0jUfVBZPLl1t3W5h+PLpKoCkNKsaPcWWcr9X/mNWm1QngMEHVKbDlvM/j\nQnOFomnBNc6QbBvpnsvhwKgj7or3DTn5sZqI5REWCQKBgQDN+5WIR76BZhTvLRmG\n0eQ79yw2D4GO2Wq3LYqL5Jzxsh9mUCazmL81tRguF8sVJWdCXmlzxICcgAfjMs1Q\nyf+r3oklN5GQvwps+QbI5mJsPPTDxtvWrzH+RG3jXSLn7FxYfIc4OScozooEqslo\n5ZIWXJQ+AesevDtt8jlAFElAPQKBgQC9ZmoZo3SEYr4CTh6wQOaWJqrS1RjmocxH\nzvn+1ovV1UGeLalOKKVjCiUQZAdPg7KEdOzRt8dCZP6zBOmDRMXQM+4oSc9FBuqN\nRrudJOIGIWNfLkNO/wg9wbpaezM9vPO7RgZDqNVpD+9Qi2XpUCVcvGz7qSE7Qii0\noiUB0QD6FwKBgQC6jLGenSth0ev/uV63BXyo+nBl/aEemLXXdD1X+RJSqzlY1hpW\n6W2y3HIrvIzGd/uO1ia3HC5GjoWWNLpSAr+1DnQy6qLA7uQoUVjdthlJYeNjM8SC\nKGUknSDQm9czKJNx6EYmm0xl3riNBYgnolKuQeZYSjCAw4UnTAqhiD3XGQKBgH1a\nPhiv7Rr9e0JtT7RZkAOKnf6iGTPznA9etmjquGwTE7XMBMT889Ej0roRaiE/SbSO\n6no2xwNzcnsrYh2GM+IDrLkveKX32N8eFGgCFDH4gRtqtBOhiWPORzdBWP2ghDPL\nObQoFu7NJBfL2uxbJg9Fil/ZZWwh8mzy78lO+fWLAoGAKQ8hP77J/JMZc3gpTQJD\nknQAeXy3DBIgtQ1xJmDKNKqkBeQhRaF5ENCy0/zLxDr/pqmRbxaj0ELSafUTNZzE\n4I44TZy2AThYzsVFjtNyCLyRiOk+OP4wKHku4Bl3ULj74gzPxZOF2i+uqOgzDM2p\nq3Xb/FSOjbYLWYfjVymVcKQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-npg8l@hatchatmobile.iam.gserviceaccount.com",
+  "client_id": "101272349666718580978",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-npg8l%40hatchatmobile.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

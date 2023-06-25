@@ -7,10 +7,14 @@ import authenticator from './routes/authenticator.js'
 import chat from './routes/chat.js';
 import customEnv from 'custom-env';
 import {socketsArray} from "./models/socketsArray.js";
+import {androidTokensArray} from "./models/androidTokens.js";
+
+
 
 const app = express();
 import {Server} from "socket.io";
 import {createServer} from "http";
+
 
 const httpServer = createServer(app);
 
@@ -21,15 +25,25 @@ const io = new Server(httpServer, {
     },
 });
 
+import firebaseAdmin from 'firebase-admin';
+import androidService from './config/firebaseKey.json';
+
+
+firebaseAdmin.initializeApp({
+   credential: firebaseAdmin.credential.cert(androidService)
+});
 
 io.on('connection', socket => {
     console.log('a user connected');
     socket.on('join', (username) => {
+        delete androidTokensArray[username];
+
         if (socketsArray[username] && socketsArray[username].connected) {
             const socketObject = socketsArray[username];
             socketObject.emit('alreadyConnected');
             return;
         }
+
         console.log(username + ' joined the chat');
         socketsArray[username] = socket;
         // Now you can access the socket using the username as the key
