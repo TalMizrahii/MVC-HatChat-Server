@@ -5,7 +5,6 @@ import chatService from "./chat.js"
 import {socketsArray} from "../models/socketsArray.js";
 import {androidTokensArray} from "../models/androidTokens.js";
 import firebaseAdmin from "firebase-admin";
-import {response} from "express";
 
 const sendMessage = async (username, fullMsg) => {
     try {
@@ -25,8 +24,8 @@ const sendMessageAndroid = async (username, fullMsg) => {
             },
             data: {
                 senderUsername: fullMsg.sender.username.toString(),
-                displayName: fullMsg.sender.displayName.toString(),
-                profilePic: fullMsg.sender.profilePic.toString(),
+                senderDisplayName: fullMsg.sender.displayName.toString(),
+                senderProfilePic: fullMsg.sender.profilePic.toString(),
                 created: fullMsg.created.toISOString(),
                 chatID: fullMsg.id.toString(),
                 content: fullMsg.content.toString(),
@@ -40,6 +39,7 @@ const sendMessageAndroid = async (username, fullMsg) => {
                 console.log('Sending message failed: ', err);
             });
     }
+};
 
     const addMessage = async (id, content, connectUsername) => {
         try {
@@ -113,6 +113,7 @@ const sendMessageAndroid = async (username, fullMsg) => {
         }
     };
 
+
     const getMessages = async (id, connectUsername) => {
         try {
             const chatArray = []
@@ -147,4 +148,3 @@ const sendMessageAndroid = async (username, fullMsg) => {
     };
 
     export default {addMessage, getMessages}
-}
