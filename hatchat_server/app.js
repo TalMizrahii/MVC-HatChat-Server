@@ -8,12 +8,12 @@ import chat from './routes/chat.js';
 import customEnv from 'custom-env';
 import {socketsArray} from "./models/socketsArray.js";
 import {androidTokensArray} from "./models/androidTokens.js";
-
-
-
-const app = express();
+import firebaseAdmin from 'firebase-admin';
+import androidService from './config/firebaseKey.json' assert {type: "json"};
 import {Server} from "socket.io";
 import {createServer} from "http";
+
+const app = express();
 
 
 const httpServer = createServer(app);
@@ -25,12 +25,9 @@ const io = new Server(httpServer, {
     },
 });
 
-import firebaseAdmin from 'firebase-admin';
-import androidService from './config/firebaseKey.json' assert { type: 'json' };
-
 
 firebaseAdmin.initializeApp({
-   credential: firebaseAdmin.credential.cert(androidService)
+    credential: firebaseAdmin.credential.cert(androidService)
 });
 
 io.on('connection', socket => {
