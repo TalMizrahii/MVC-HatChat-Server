@@ -58,9 +58,24 @@ With meticulous implementation and integration of these technologies and framewo
 
 ## Installing And Executing
   
-To clone and run this application, you'll need [Git](https://git-scm.com) installed on your computer. From your command line:
+To clone and run the server, you'll need [Git](https://git-scm.com) installed on your computer. From your command line:
 
+```bash
+# Clone this repository.
+$ git clone https://github.com/TalMizrahii/MVC-HatChat-Server
 
+# Go into the repository.
+$ cd MVC-HatChat-Server
+  
+# Go into the project folder.
+$ cd hatchat_server
+  
+# Install the needed libraries.
+$ npm install
+  
+# Start the program.
+$ npm start
+```
 
 
 ## Authors
