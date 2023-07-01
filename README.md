@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h4 align="center">The Hatchat MVC server was created to support the [Hatchat Mobile](https://github.com/TalMizrahii/HatchatMobileApp) app (Android) and the [Hatchat Web](https://github.com/TalMizrahii/AP2-Ex3) app. Developed as a project for the Advanced Programming 2 course at Bar-Ilan University.
+<h4 align="center">The Hatchat MVC server was created to support the Hatchat applications. Developed as a project for the Advanced Programming 2 course at Bar-Ilan University.
 
 
 <p align="center">
@@ -19,7 +19,7 @@
 
 ## Description
 
-The Hatchat [MVC](https://www.geeksforgeeks.org/mvc-framework-introduction/) server serves as the robust foundation of our application, handling the backend logic and facilitating seamless communication with the database. It harnesses cutting-edge technologies and frameworks to ensure efficient and secure operation.
+The Hatchat [MVC](https://www.geeksforgeeks.org/mvc-framework-introduction/) server serves as the robust foundation of our application, contains the [Hatchat Mobile](https://github.com/TalMizrahii/HatchatMobileApp) app (Android) and the [Hatchat Web](https://github.com/TalMizrahii/AP2-Ex3) app , handling the backend logic and facilitating seamless communication with the database. It harnesses cutting-edge technologies and frameworks to ensure efficient and secure operation.
 
 
 ## Implementation
