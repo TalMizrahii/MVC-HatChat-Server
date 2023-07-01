@@ -19,12 +19,18 @@
 
 ## Description
 
+<img width="639" alt="1" src="https://github.com/TalMizrahii/MVC-HatChat-Server/assets/103560553/46560031-f46f-4aa2-b745-15a4c79a35bc">
+
 ## Implementation
+
+
 
 ## Installing And Executing
   
 To clone and run this application, you'll need [Git](https://git-scm.com) installed on your computer. From your command line:
 
+<img width="779" alt="serverWeb" src="https://github.com/TalMizrahii/MVC-HatChat-Server/assets/103560553/9a8d4cee-90e5-4a52-aad1-7277b3be0dc5">
+<img width="778" alt="serverAndroid" src="https://github.com/TalMizrahii/MVC-HatChat-Server/assets/103560553/a6d9726f-f05f-40aa-a978-8af5bb6ea643">
 
 
 ## Authors
