@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
 
-  <a href="https://github.com/TalMizrahii/MVC-HatChat-Server"><img src="https://github.com/TalMizrahii/MVC-HatChat-Server/assets/103560553/8afe059b-e511-4835-bf48-9b16b2e2ef2c" alt="HTML" width="800"></a>
+  <a href="https://github.com/TalMizrahii/MVC-HatChat-Server"><img src="https://github.com/TalMizrahii/MVC-HatChat-Server/blob/main/res/Node.js_logo_2015.svg.png" alt="NODE" width="700"></a>
   <br>
   Hatchat MVC Server
   <br>
@@ -28,16 +28,16 @@ At the core of our server lies [Node.js](https://en.wikipedia.org/wiki/Node.js),
 
 To streamline the development process and enhance the functionality of our server, we employ [Express.js](https://expressjs.com/) as the web application framework. Express.js simplifies the handling of [HTTP](https://en.wikipedia.org/wiki/HTTP) requests and enables us to set up intuitive API routes effortlessly. With its lightweight and minimalist design, Express.js allows us to build robust and modular applications.
 
-<img width="382" alt="Socket" src="https://github.com/TalMizrahii/MVC-HatChat-Server/assets/103560553/e986bdbe-4564-4223-aa24-92b26c171f20">
+<img width="382" alt="Socket" src="https://github.com/TalMizrahii/MVC-HatChat-Server/blob/main/res/1.jpg">
 
 Real-time communication is a fundamental aspect of our application, and we achieve this by integrating [Socket.IO](https://socket.io/) into our server. Socket.IO enables bidirectional communication between the server and clients, empowering us to deliver real-time updates and notifications to our users. This technology facilitates seamless chat experiences, ensuring instant message delivery and synchronization across devices.
 
-<img width="382" alt="Socket" src="https://github.com/TalMizrahii/MVC-HatChat-Server/assets/103560553/afacda6b-d274-4a33-bdb4-adb116920c28">
+<img width="382" alt="Socket" src="https://github.com/TalMizrahii/MVC-HatChat-Server/blob/main/res/broadcasting.png">
 
 
 Ensuring efficient data storage and retrieval, our server connects to a [MongoDB](https://www.mongodb.com/) database. MongoDB, a powerful [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database, provides flexibility and scalability, making it an ideal choice for our application. To simplify our interaction with the database, we utilize Mongoose as an Object Data Modeling (ODM) library. Mongoose offers a user-friendly and intuitive interface, allowing us to define and manipulate data schemas effortlessly.
 
-<img width="700" alt="ReactAPPMONGOGIT" src="https://github.com/TalMizrahii/MVC-HatChat-Server/assets/103560553/470d32dd-fc6a-48b1-9de8-d69746f08386">
+<img width="550" alt="ReactAPPMONGOGIT" src="https://github.com/TalMizrahii/MVC-HatChat-Server/blob/main/res/MERN.png">
 
 Additionally, our server extends its capabilities by supporting [Firebase](https://firebase.google.com/) services for communication with The Hatchat Android app. By leveraging Firebase, we can efficiently identify the type of device making a new message request. This information enables us to send messages using the appropriate service, utilizing Firebase for Android devices and Socket.IO for the web app. This seamless integration ensures a consistent and optimized user experience across different platforms.
 
