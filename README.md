@@ -41,14 +41,14 @@ Ensuring efficient data storage and retrieval, our server connects to a [MongoDB
 
 Additionally, our server extends its capabilities by supporting [Firebase](https://firebase.google.com/) services for communication with The Hatchat Android app. By leveraging Firebase, we can efficiently identify the type of device making a new message request. This information enables us to send messages using the appropriate service, utilizing Firebase for Android devices and Socket.IO for the web app. This seamless integration ensures a consistent and optimized user experience across different platforms.
 
-<img width="779" alt="serverWeb" src="https://github.com/TalMizrahii/MVC-HatChat-Server/assets/103560553/9a8d4cee-90e5-4a52-aad1-7277b3be0dc5">
+<img width="779" alt="serverWeb" src="https://github.com/TalMizrahii/MVC-HatChat-Server/blob/main/res/1.PNG">
 
 
 Architecturally, our server follows the Model-View-Controller (MVC) design pattern. This pattern enhances code organization and separation of concerns, enabling easier maintenance and extensibility. The express module helps us structure our server-side code, allowing us to create an instance of the Express app to handle incoming HTTP requests effectively.
 
 To facilitate communication between different components of our application, the server establishes a Socket.IO connection, enabling real-time communication with the Hatchat web app. This integration ensures smooth and responsive interactions, enhancing the user experience.
 
-<img width="778" alt="serverAndroid" src="https://github.com/TalMizrahii/MVC-HatChat-Server/assets/103560553/a6d9726f-f05f-40aa-a978-8af5bb6ea643">
+<img width="778" alt="serverAndroid" src="https://github.com/TalMizrahii/MVC-HatChat-Server/blob/main/res/ar2.PNG">
 
 Furthermore, we establish API routes for users, tokens, and chats using dedicated routers (users, authenticator, and chat). These routes streamline the flow of data and operations within our application, ensuring secure and efficient communication between the client and server.
 
